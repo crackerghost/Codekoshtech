@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Ethnocentric" !important;
+    src: url("/assets/fonts/ethnocentric rg.otf") format("opentype"),
+      url("/assets/fonts/ethnocentric rg it.otf") format("opentype"),
+      url("/assets/fonts/ethnocentric rg.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@layer components {
+  .font-ethnocentric {
+    font-family: "Ethnocentric" Arial, Helvetica, sans-serif;
+  }
+}
+
+@layer components {
+  h1 {
+    @apply text-gray-50 font-ethnocentric font-bold  text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-gray-100 font-bold text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-gray-200  font-bold text-[3vh] md:text-2xl lg:text-3xl;
+  }
+
+  h4 {
+    @apply text-gray-200 text-[3vh] md:text-xl lg:text-2xl font-bold;
+  }
+
+  h5 {
+    @apply font-semibold text-base md:text-lg lg:text-xl;
+  }
+
+  p {
+    @apply text-gray-100 text-sm md:text-base lg:text-lg;
+  }
+
+  .btn-primary {
+    @apply py-2 px-5 bg-blue-500 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-75;
+  }
+}
+
+@layer utilities {
+  .paused {
+    animation-play-state: paused;
+  }
+}
