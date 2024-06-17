@@ -22,8 +22,9 @@ body {
 }
 
 footer {
-  overflow: hidden;
+  z-index: 1;
 }
+
 
 /* Optional: Adjustments for animations */
 .leftAnime, .topAnime, .rightAnime {

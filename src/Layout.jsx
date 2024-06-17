@@ -3,6 +3,7 @@ import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Loader from "./components/common/Loader";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+
 import "./hooks/locomotive.css";
 import { useRef, useState } from "react";
 import { useEffect } from "react";
@@ -27,7 +28,7 @@ const Layout = () => {
         <Loader />
       ) : (
         <LocomotiveScrollProvider options={options} scrollRef={scrollRef}>
-          <main data-scroll-container ref={scrollRef} id="main" className="overflow-x-hidden">
+          <main data-scroll-container ref={scrollRef} id="main">
             <Navbar />
             <Outlet />
             <Footer />
