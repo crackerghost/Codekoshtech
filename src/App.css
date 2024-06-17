@@ -1,5 +1,9 @@
 .heroBg,
 body {
+
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   background-image: linear-gradient(
     to right top,
     #080115,
@@ -15,6 +19,16 @@ body {
     #030714,
     #00040f
   );
+}
+
+footer {
+  overflow: hidden;
+}
+
+/* Optional: Adjustments for animations */
+.leftAnime, .topAnime, .rightAnime {
+  position: absolute;
+  overflow: hidden;
 }
 
 /* .hamburger-menu {
