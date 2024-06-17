@@ -25,7 +25,7 @@ const CustomCursor = ({ isVisible }) => {
   }
 
   return (
-    <div
+    <div data-scroll-container
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
