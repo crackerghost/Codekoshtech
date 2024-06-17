@@ -23,7 +23,7 @@ const Footer = () => {
         data-scroll
       ></div>
       <footer
-        className="fixed bottom-0 !-z-1 w-full mx-auto rounded-md h-[60vh] pt-[20vh] overflow-hidden"
+        className="fixed bottom-0 !-z-1 w-full mx-auto rounded-md h-[45vh] pt-[20vh] overflow-hidden"
         data-scroll
       >
         <div className="leftAnime anime"></div>
