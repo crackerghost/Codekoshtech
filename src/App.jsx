@@ -11,7 +11,10 @@ import Project from "./components/home/Project";
 
 function App() {
   return (
-    <div data-scroll-section className=" relative min-w-[100vw] min-h-screen z-50 heroBg  shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px]">
+    <div
+      data-scroll-section
+      className=" relative  h-[100%] z-50 heroBg  shadow-[rgba(7,_65,_210,_0.1)_0px_9px_30px]"
+    >
       <Hero />
       <Services />
       <About />

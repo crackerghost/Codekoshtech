@@ -15,8 +15,7 @@ const projects = [
   {
     title: "Sun Foundation ",
     category: "Newsletter • WEB DESIGN • WEBFLOW",
-    image:
-    sunfoundation ,
+    image: sunfoundation,
     link: "https://sunfoundation.vercel.app/mobile/index.html",
   },
   {
@@ -25,7 +24,6 @@ const projects = [
     image: FriendlyParenting,
     link: "https://voltster.github.io/Friendly-Parenting",
   },
- 
 ];
 
 const Project = () => {
@@ -35,7 +33,6 @@ const Project = () => {
     <section
       className={`container mx-auto w-11/12 py-16 ${hovered ? "hovered" : ""}`}
       id="portfolio"
-     
     >
       <CustomCursor isVisible={hovered} />
       <h2 className="text-5xl font-medium text-center my-10">
