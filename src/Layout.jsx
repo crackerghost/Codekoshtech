@@ -13,6 +13,7 @@ const Layout = () => {
 
   const options = {
     smooth: true,
+    
   };
 
   const [loading, setLoading] = useState(true);
@@ -28,7 +29,7 @@ const Layout = () => {
         <Loader />
       ) : (
         <LocomotiveScrollProvider options={options} scrollRef={scrollRef}>
-          <main data-scroll-container ref={scrollRef} id="main">
+          <main data-scroll-container ref={scrollRef} id="main" className="bg-black">
             <Navbar />
             <Outlet />
             <Footer />
