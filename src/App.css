@@ -19,12 +19,19 @@ body {
     #030714,
     #00040f
   );
+
+  height: 100%;
 }
 
 footer {
   z-index: 1;
 }
 
+
+
+[data-scroll-container] {
+  overflow: hidden;
+}
 
 /* Optional: Adjustments for animations */
 .leftAnime, .topAnime, .rightAnime {
