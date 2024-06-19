@@ -17,7 +17,7 @@ const Layout = () => {
 
   // Determine scroll options based on device type
   const options = {
-    smooth: isMobile ? 0.2 : 1.0, // Adjust smooth value based on device type
+    smooth: isMobile ? 0.5 : 1.0, // Adjust smooth value based on device type
   };
 
   useEffect(() => {
