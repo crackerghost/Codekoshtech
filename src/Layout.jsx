@@ -12,13 +12,8 @@ const Layout = () => {
   const scrollRef = useRef(null);
 
   const options = {
-    smooth: true,
-    smartphone: {
-      smooth: true,
-    },
-    tablet: {
-      smooth: true,
-    },
+    smooth: true
+ 
   };
 
   const [loading, setLoading] = useState(true);
