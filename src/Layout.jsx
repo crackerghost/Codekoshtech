@@ -3,22 +3,16 @@ import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Loader from "./components/common/Loader";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import { useRef, useState, useEffect } from "react";
 
-import "locomotive-scroll/dist/locomotive-scroll.css";
 import "./hooks/locomotive.css";
+import { useRef, useState } from "react";
+import { useEffect } from "react";
 
 const Layout = () => {
   const scrollRef = useRef(null);
 
   const options = {
     smooth: true,
-    smartphone: {
-      smooth: true,
-    },
-    tablet: {
-      smooth: true,
-    },
   };
 
   const [loading, setLoading] = useState(true);
@@ -38,13 +32,12 @@ const Layout = () => {
             data-scroll-container
             ref={scrollRef}
             id="main"
-            className="relative"
+            className="bg-black"
+            style={{ backgroundColor: "black" }}
           >
             <Navbar />
-            <div className="flex flex-col min-h-screen">
-              <Outlet />
-              <Footer />
-            </div>
+            <Outlet />
+            <Footer />
           </main>
         </LocomotiveScrollProvider>
       )}
