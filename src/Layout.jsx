@@ -33,7 +33,7 @@ const Layout = () => {
           <div data-scroll-container ref={scrollRef} id="main" className="relative">
             
             <div className="flex flex-col min-h-screen">
-            <Navbar />
+              <Navbar />
               <Outlet />
               <Footer />
             </div>
