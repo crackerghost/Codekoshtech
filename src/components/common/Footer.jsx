@@ -7,8 +7,8 @@ const FooterLink = ({ to, children }) => {
   return (
     <Link
       to={to}
-      target="blank"
-      className="hover:border-gray-100 border-b border-transparent  font-normal flex items-center gap-2"
+      target="_blank"
+      className="hover:border-gray-100 border-b border-transparent font-normal flex items-center gap-2"
     >
       {children}
     </Link>
@@ -19,11 +19,11 @@ const Footer = () => {
   return (
     <>
       <div
-        className="w-screen h-[60vh] md:h-screen bg-transparent relative !-z-1 overflow-x-hidden"
+        className="w-screen h-[60vh] md:h-screen bg-transparent relative overflow-x-hidden"
         data-scroll
       ></div>
       <footer
-        className="fixed bottom-0 !-z-1 w-full mx-auto rounded-md h-[100vh] pt-[20vh] overflow-hidden"
+        className="relative bottom-0 w-full mx-auto rounded-md h-auto pt-[20vh] overflow-hidden"
         data-scroll
       >
         <div className="leftAnime anime"></div>
