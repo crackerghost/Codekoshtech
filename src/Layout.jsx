@@ -12,13 +12,8 @@ const Layout = () => {
   const scrollRef = useRef(null);
 
   const options = {
-    smooth: true,
-    smartphone: {
-      smooth: true,
-    },
-    tablet: {
-      smooth: true,
-    },
+    smooth: true
+    
   };
 
   const [loading, setLoading] = useState(true);
@@ -34,13 +29,15 @@ const Layout = () => {
         <Loader />
       ) : (
         <LocomotiveScrollProvider options={options} containerRef={scrollRef}>
+          <Navbar />
           <div data-scroll-container ref={scrollRef} id="main" className="relative">
-            <Navbar />
+            
             <div className="flex flex-col min-h-screen">
               <Outlet />
             </div>
-            <Footer /> {/* Ensure Footer is outside the flex container */}
+          
           </div>
+          <Footer />
         </LocomotiveScrollProvider>
       )}
     </>
