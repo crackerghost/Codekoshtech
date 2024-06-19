@@ -3,17 +3,16 @@ import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Loader from "./components/common/Loader";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import { useRef, useState, useEffect } from "react";
 
-import "locomotive-scroll/dist/locomotive-scroll.css";
 import "./hooks/locomotive.css";
+import { useRef, useState } from "react";
+import { useEffect } from "react";
 
 const Layout = () => {
   const scrollRef = useRef(null);
 
   const options = {
-    smooth: true
- 
+    smooth: true,
   };
 
   const [loading, setLoading] = useState(true);
@@ -28,14 +27,12 @@ const Layout = () => {
       {loading ? (
         <Loader />
       ) : (
-        <LocomotiveScrollProvider options={options} containerRef={scrollRef}>
-          <div data-scroll-container ref={scrollRef} id="main" className="relative">
+        <LocomotiveScrollProvider options={options} scrollRef={scrollRef}>
+          <main data-scroll-container ref={scrollRef} id="main">
             <Navbar />
-            <div className="flex flex-col min-h-screen">
-              <Outlet />
-            </div>
+            <Outlet />
             <Footer />
-          </div>
+          </main>
         </LocomotiveScrollProvider>
       )}
     </>
