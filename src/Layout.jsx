@@ -28,12 +28,12 @@ const Layout = () => {
         <Loader />
       ) : (
         <LocomotiveScrollProvider options={options} containerRef={scrollRef}>
-          <div data-scroll-container ref={scrollRef} id="main">
+          <div data-scroll-container ref={scrollRef} id="main" className="relative">
             <Navbar />
             <div className="flex flex-col min-h-screen">
               <Outlet />
-              <Footer />
             </div>
+            <Footer />
           </div>
         </LocomotiveScrollProvider>
       )}
