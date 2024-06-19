@@ -31,7 +31,8 @@ const Layout = () => {
           <main data-scroll-container ref={scrollRef} id="main">
             <Navbar />
             <Outlet />
-            <Footer />
+            <Footer /> 
+            {/* a */}
           </main>
         </LocomotiveScrollProvider>
       )}
