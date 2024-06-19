@@ -10,10 +10,9 @@ import "./hooks/locomotive.css";
 
 const Layout = () => {
   const scrollRef = useRef(null);
-
   const options = {
     smooth: true
-    
+    // Add any other options you need
   };
 
   const [loading, setLoading] = useState(true);
@@ -29,17 +28,13 @@ const Layout = () => {
         <Loader />
       ) : (
         <LocomotiveScrollProvider options={options} containerRef={scrollRef}>
-          
-          <div data-scroll-container ref={scrollRef} id="main" className="relative">
-            
+          <div data-scroll-container ref={scrollRef} id="main">
+            <Navbar />
             <div className="flex flex-col min-h-screen">
-              <Navbar />
               <Outlet />
               <Footer />
             </div>
-          
           </div>
-        
         </LocomotiveScrollProvider>
       )}
     </>
