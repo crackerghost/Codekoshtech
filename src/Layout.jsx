@@ -7,6 +7,23 @@ import { useRef, useState, useEffect } from "react";
 
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import "./hooks/locomotive.css";
+const StickyOverlay = () => {
+  const [showOverlay, setShowOverlay] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setShowOverlay(scrollY > 100); // Adjust this value as needed
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return showOverlay ? (
+    <div className="fixed bottom-0 w-full h-full bg-black opacity-75 z-50"></div>
+  ) : null;
+};
 
 const Layout = () => {
   const scrollRef = useRef(null);
@@ -35,6 +52,7 @@ const Layout = () => {
               <Footer />
             </div>
           </div>
+          <StickyOverlay />
         </LocomotiveScrollProvider>
       )}
     </>
