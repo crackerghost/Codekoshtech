@@ -27,8 +27,14 @@ const Layout = () => {
       {loading ? (
         <Loader />
       ) : (
-        <LocomotiveScrollProvider options={options} scrollRef={scrollRef}>
-          <main data-scroll-container ref={scrollRef} id="main">
+        <LocomotiveScrollProvider options={options} containerRef={scrollRef}>
+          <main
+            data-scroll-container
+            ref={scrollRef}
+            id="main"
+            className="bg-black"
+            style={{ backgroundColor: "black" }}
+          >
             <Navbar />
             <Outlet />
             <Footer />
