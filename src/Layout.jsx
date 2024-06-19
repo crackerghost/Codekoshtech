@@ -5,6 +5,7 @@ import Loader from "./components/common/Loader";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef, useState, useEffect } from "react";
 import { debounce } from "lodash";
+import { isMobile } from "react-device-detect"; // Import from react-device-detect
 
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import "./hooks/locomotive.css";
@@ -14,8 +15,9 @@ const Layout = () => {
   const [loading, setLoading] = useState(true);
   const location = useLocation(); // Get current location from React Router
 
+  // Determine scroll options based on device type
   const options = {
-    smooth: true,
+    smooth: isMobile ? 0.2 : 1.0, // Adjust smooth value based on device type
   };
 
   useEffect(() => {
