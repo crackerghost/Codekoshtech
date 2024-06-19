@@ -23,10 +23,28 @@ body {
   height: 100%;
 }
 
-footer {
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  background-color: #ffffff; /* Adjust as per your design */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(0);
+  opacity: 1;
   z-index: 1;
 }
 
+.footer-hidden {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.footer-placeholder {
+  height: 100vh; /* Adjust to match the height of your footer */
+}
 
 
 [data-scroll-container] {
