@@ -11,11 +11,12 @@ const Layout = () => {
 
   const options = {
     smooth: true,
-    tablet: true, // Enable smooth scrolling on tablets
-    smartphone: true, // Enable smooth scrolling on smartphones
-    getSpeed: 1000, // Adjust the speed if needed (default is 50)
-    getDirection: "vertical", // Ensure vertical scrolling
-    touchMultiplier: 2.5, // Increase touch sensitivity for smoother scrolling
+    tablet: true,
+    smartphone: true,
+    getSpeed: 50, // Adjusted speed for smoother scrolling on phones
+    getDirection: "vertical",
+    touchMultiplier: 2.5,
+    lerp: 0.1, // Adjust lerp for smoother motion
   };
 
   const [loading, setLoading] = useState(true);
