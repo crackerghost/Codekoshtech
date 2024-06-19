@@ -3,7 +3,7 @@ body {
 
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   background-image: linear-gradient(
     to right top,
     #080115,
@@ -19,12 +19,16 @@ body {
     #030714,
     #00040f
   );
+
+  height: 100%;
 }
 
-footer {
-  z-index: 1;
-}
 
+
+
+[data-scroll-container] {
+  overflow: hidden;
+}
 
 /* Optional: Adjustments for animations */
 .leftAnime, .topAnime, .rightAnime {
