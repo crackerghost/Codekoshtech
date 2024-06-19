@@ -13,16 +13,6 @@ const Layout = () => {
 
   const options = {
     smooth: true,
-    smartphone: {
-      smooth: true,
-      touchMultiplier: 3, // Adjust touchMultiplier for smoother scrolling on touch devices
-    },
-    tablet: {
-      smooth: true,
-      touchMultiplier: 2, // Adjust touchMultiplier for smoother scrolling on tablets
-    },
-    reloadOnContextChange: true, // Optional: reloads the scroll context when context (like a font or a container width) changes
-    lerp: 0.07, // Optional: adjust lerp for smoothness; higher values for faster response, lower values for smoother motion
   };
 
   const [loading, setLoading] = useState(true);
