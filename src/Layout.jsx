@@ -15,8 +15,8 @@ const Layout = () => {
     smartphone: true,
     getSpeed: 200, // Adjusted speed for smoother scrolling on phones
     getDirection: "vertical",
-    touchMultiplier: 2.5,
-    lerp: 0.1, // Adjust lerp for smoother motion
+    touchMultiplier: 3, // Increased touch multiplier for smoother scrolling on touch devices
+    lerp: 0.15, // Fine-tuned lerp value for smoother motion
   };
 
   const [loading, setLoading] = useState(true);
