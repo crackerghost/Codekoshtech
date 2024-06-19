@@ -30,8 +30,8 @@ const Layout = () => {
         <LocomotiveScrollProvider options={options} containerRef={scrollRef}>
           <div data-scroll-container ref={scrollRef} id="main">
             <Navbar />
-            <div className="flex flex-col min-h-screen">
-              <Outlet />
+            <div className="flex flex-col">
+              <Outlet className="h-[150vh]" />
               <Footer />
             </div>
           </div>
