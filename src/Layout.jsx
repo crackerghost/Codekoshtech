@@ -4,19 +4,21 @@ import Footer from "./components/common/Footer";
 import Loader from "./components/common/Loader";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef, useState, useEffect } from "react";
+
+import "locomotive-scroll/dist/locomotive-scroll.css";
 import "./hooks/locomotive.css";
 
 const Layout = () => {
-  const scrollContainerRef = useRef(null);
+  const scrollRef = useRef(null);
 
   const options = {
     smooth: true,
-    tablet: true,
-    smartphone: true,
-    getSpeed: 200, // Adjusted speed for smoother scrolling on phones
-    getDirection: "vertical",
-    touchMultiplier: 3, // Increased touch multiplier for smoother scrolling on touch devices
-    lerp: 0.15, // Fine-tuned lerp value for smoother motion
+    smartphone: {
+      smooth: true,
+    },
+    tablet: {
+      smooth: true,
+    },
   };
 
   const [loading, setLoading] = useState(true);
@@ -31,12 +33,14 @@ const Layout = () => {
       {loading ? (
         <Loader />
       ) : (
-        <LocomotiveScrollProvider options={options} containerRef={scrollContainerRef}>
-          <main data-scroll-container ref={scrollContainerRef} id="main" className="bg-black">
+        <LocomotiveScrollProvider options={options} containerRef={scrollRef}>
+          <div data-scroll-container ref={scrollRef} id="main" className="relative">
             <Navbar />
-            <Outlet />
-            <Footer />
-          </main>
+            <div className="flex flex-col min-h-screen">
+              <Outlet />
+            </div>
+            <Footer /> {/* Ensure Footer is outside the flex container */}
+          </div>
         </LocomotiveScrollProvider>
       )}
     </>
