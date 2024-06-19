@@ -18,10 +18,7 @@ const FooterLink = ({ to, children }) => {
 const Footer = () => {
   return (
     <>
-      <div
-        className="w-screen h-[60vh] md:h-screen bg-transparent relative overflow-x-hidden"
-        data-scroll
-      ></div>
+    
       <footer
         className="relative bottom-0 w-full mx-auto rounded-md h-auto pt-[20vh] overflow-hidden"
         data-scroll
