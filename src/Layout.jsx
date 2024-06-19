@@ -32,8 +32,8 @@ const Layout = () => {
             data-scroll-container
             ref={scrollRef}
             id="main"
-            className=" bg-transparent"
-           
+            className="bg-black"
+            style={{ backgroundColor: "black" }}
           >
             <Navbar />
             <Outlet />
