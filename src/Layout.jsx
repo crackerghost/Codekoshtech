@@ -10,9 +10,9 @@ import "./hooks/locomotive.css";
 
 const Layout = () => {
   const scrollRef = useRef(null);
+
   const options = {
-    smooth: true
-    // Add any other options you need
+    smooth: true,
   };
 
   const [loading, setLoading] = useState(true);
