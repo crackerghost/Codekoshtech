@@ -23,6 +23,9 @@ body {
   height: 100%;
 }
 
+footer {
+  z-index: 1;
+}
 
 
 
