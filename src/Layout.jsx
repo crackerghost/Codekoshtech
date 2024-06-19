@@ -13,6 +13,12 @@ const Layout = () => {
 
   const options = {
     smooth: true,
+    smartphone: {
+      smooth: true,
+    },
+    tablet: {
+      smooth: true,
+    },
   };
 
   const [loading, setLoading] = useState(true);
@@ -32,12 +38,13 @@ const Layout = () => {
             data-scroll-container
             ref={scrollRef}
             id="main"
-            className="bg-black"
-            style={{ backgroundColor: "black" }}
+            className="relative"
           >
             <Navbar />
-            <Outlet />
-            <Footer />
+            <div className="flex flex-col min-h-screen">
+              <Outlet />
+              <Footer />
+            </div>
           </main>
         </LocomotiveScrollProvider>
       )}
