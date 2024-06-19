@@ -3,10 +3,10 @@ import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
 import Loader from "./components/common/Loader";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import { useRef, useState, useEffect } from "react";
 
+import "locomotive-scroll/dist/locomotive-scroll.css";
 import "./hooks/locomotive.css";
-import { useRef, useState } from "react";
-import { useEffect } from "react";
 
 const Layout = () => {
   const scrollRef = useRef(null);
