@@ -13,10 +13,10 @@ const Layout = () => {
     smooth: true,
     tablet: true,
     smartphone: true,
-    getSpeed: 50, // Adjusted speed for smoother scrolling on phones
+    getSpeed: 50,
     getDirection: "vertical",
     touchMultiplier: 2.5,
-    lerp: 0.1, // Adjust lerp for smoother motion
+    lerp: 0.1, 
   };
 
   const [loading, setLoading] = useState(true);
