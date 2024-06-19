@@ -7,16 +7,15 @@ import { useRef, useState, useEffect } from "react";
 import "./hooks/locomotive.css";
 
 const Layout = () => {
-  const scrollRef = useRef(null);
+  const scrollContainerRef = useRef(null);
 
   const options = {
     smooth: true,
-    tablet: {
-      smooth: true,
-    },
-    smartphone: {
-      smooth: true,
-    },
+    tablet: true, // Enable smooth scrolling on tablets
+    smartphone: true, // Enable smooth scrolling on smartphones
+    getSpeed: 1000, // Adjust the speed if needed (default is 50)
+    getDirection: "vertical", // Ensure vertical scrolling
+    touchMultiplier: 2.5, // Increase touch sensitivity for smoother scrolling
   };
 
   const [loading, setLoading] = useState(true);
@@ -31,8 +30,8 @@ const Layout = () => {
       {loading ? (
         <Loader />
       ) : (
-        <LocomotiveScrollProvider options={options} containerRef={scrollRef}>
-          <main data-scroll-container ref={scrollRef} id="main" className="bg-black">
+        <LocomotiveScrollProvider options={options} containerRef={scrollContainerRef}>
+          <main data-scroll-container ref={scrollContainerRef} id="main" className="bg-black">
             <Navbar />
             <Outlet />
             <Footer />
