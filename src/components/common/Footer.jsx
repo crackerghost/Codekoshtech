@@ -93,7 +93,7 @@ const Footer = () => {
   return (
     <>
       <div
-        className="w-screen h-[60vh] md:h-screen bg-transparent relative !-z-1 overflow-x-hidden"
+        className="w-screen h-[100vh] md:h-screen bg-transparent relative !-z-1 overflow-x-hidden"
         data-scroll
       ></div>
       <footer
